@@ -58,3 +58,25 @@ class Student {
         return labPoints.size()>8;
 	}
 }
+
+class Course {
+    private List<Student> students;
+    
+    public Course() {
+        students = new ArrayList<>();
+    }
+    
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+    
+    public void removeStudent(Student student) {
+        students.remove(student);
+    }
+    
+    public void printAllStudents() {
+        for(Student s: students) {
+            System.out.println(s.getIndex() + "-" + s.getName() + "_" + s.getLastName());
+        }
+    }
+}
